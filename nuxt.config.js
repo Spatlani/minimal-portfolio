@@ -22,7 +22,7 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap' }
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap' }
     ]
   },
 
@@ -60,11 +60,14 @@ export default {
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
+    treeShake: true,
+    defaultAssets: {
+      font: {
+        family: 'Montserrat',
+      },
+    },
     customVariables: ['~/assets/variables.scss'],
     theme: {
-      font: {
-        family: 'Open Sans',
-      },
       // dark: true,
       themes: {
         dark: {

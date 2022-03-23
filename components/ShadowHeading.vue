@@ -5,6 +5,9 @@
         <v-col cols="8">
           {{ text }}
         </v-col>
+        <v-col v-if="subtext" cols="8" class="subtitle-2">
+          {{ subtext }}
+        </v-col>
       </v-row>
     </v-container>
   </h1>
@@ -18,9 +21,9 @@ export default {
       default: ''
     },
 
-    loading: {
-      type: Boolean,
-      default: false
+    subtext: {
+      type: String,
+      default: ''
     }
   }
 }
@@ -38,7 +41,7 @@ export default {
   position: absolute;
   height: max-content;
   line-height: 1.4;
-  opacity: 0.03;
+  opacity: 0.02;
   color: var(--v-secondary-lighten5);
   font-size: 6em;
   margin-top: 16px;

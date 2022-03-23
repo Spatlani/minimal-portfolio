@@ -1,23 +1,23 @@
 <template>
   <v-sheet>
-    <section class="my-16">
+    <section class="py-10 my-16" id="about">
       <v-row>
-        <v-col md="6">
+        <v-col md="8">
           <v-row>
-            <v-col cols="12" class="text-h3 ">
-              Ruchi Raj
+            <v-col cols="12" class="text-h3 font-weight-medium">
+              Hi, I am Ruchi Raj
             </v-col>
-            <v-col cols="12" class="font-weight-bold">
+            <v-col cols="12" class="text-h6 font-weight-bold">
               Onboarding Specialist and Customer Success Manager
             </v-col>
             <v-col cols="12" class="text-justify body-2">
               Result-driven and detailed oriented professional holding 5+ years of experience with various SAAS platforms
               handling customers' success and building relationships across the globe with a consulting approach. Pursuing
               the opportunity at Techpacker to boost premium customer satisfaction with 90% positive feedback and
-              automate the non-enterprise customer onboarding and journey
+              automate the non-enterprise customer onboarding and journey.
             </v-col>
             <v-col cols="12" class="text-justify body-2">
-              <v-btn color="primary" elevation="0" class="text-capitalize" :href="mailingAddress">
+              <v-btn color="yellow lighten-2" elevation="0" class="text-capitalize" :href="mailingAddress">
                 Get in touch!
               </v-btn>
             </v-col>
@@ -25,7 +25,7 @@
         </v-col>
       </v-row>
     </section>
-    <section class="my-16">
+    <section class="py-10 my-16">
       <v-row>
         <v-col cols="3">
           <v-row>
@@ -47,59 +47,115 @@
             </v-col>
           </v-row>
         </v-col>
-        <v-col cols="auto">
+        <v-col cols="3">
+          <v-row>
+            <v-col cols="auto" class="text-h3 font-weight-bold">
+              7
+            </v-col>
+            <v-col cols="9">
+              On-Site implementation in 5 Countries
+            </v-col>
+          </v-row>
+        </v-col>
+        <v-col cols="3">
           <v-row>
             <v-col cols="auto" class="text-h3 font-weight-bold">
               256
             </v-col>
-            <v-col cols="8">
-              Successfull Implementations in 7 Countries
+            <v-col cols="7">
+              Online onboardings in 20 Countries
             </v-col>
           </v-row>
         </v-col>
       </v-row>
     </section>
 
-    <section class="my-16">
+    <section class="py-10 my-16" id="onboardings">
       <shadow-heading text="Onboardings" />
       <v-row>
         <v-col>
           <v-card flat height="400" rounded>
-            <GmapMap :center="mapCenter" :zoom="4" style="width: 100%; height: 100%">
-              <GmapMarker
-                :key="index"
-                v-for="(m, index) in implementations"
-                :position="m.position"
-                :clickable="true"
-                @click="center=m.position"
-              />
-            </GmapMap>
+            <google-map />
           </v-card>
         </v-col>
       </v-row>
     </section>
 
-    <section class="my-16">
+    <section class="py-10 my-16" id="work">
       <shadow-heading text="Work" />
       <v-row>
         <v-col cols="6">
-          <v-card color="blue lighten-5" flat height="200">
-            asd
+          <v-card color="#0dd5b21a" flat>
+            <v-card-text>
+              <div class="text-overline mb-3">
+                <v-row justify="space-between">
+                  <v-col cols="auto">
+                    April 2019 - Present
+                  </v-col>
+                  <v-col cols="auto">
+                    US, Remote
+                  </v-col>
+                </v-row>
+              </div>
+              <p class="text-h5 text--primary">
+                Senior customer success manager
+              </p>
+              <ul>
+                <li>
+                  Manage a team of 5-6 people including support, implementation, and copyrighter to drive the success strategy for clients.
+                </li>
+                <li>
+                  Foster strong relationships with C-Suite and 50+ client accounts to develop and nurture long-term growth
+                </li>
+              </ul>
+              <v-row class="mt-4" justify="space-between">
+                <v-col cols="6">
+                  <v-img :src="logoSrc('techpacker')" />
+                </v-col>
+              </v-row>
+            </v-card-text>
           </v-card>
         </v-col>
 
         <v-col cols="6">
-          <v-card color="red lighten-5" flat height="200">
-            asd
+          <v-card color="grey lighten-4" flat>
+            <v-card-text>
+              <div class="text-overline mb-3">
+                <v-row justify="space-between">
+                  <v-col cols="auto">
+                    July 2018 - March 2019
+                  </v-col>
+                  <v-col cols="auto">
+                    US, Remote
+                  </v-col>
+                </v-row>
+              </div>
+              <p class="text-h5 text--primary">
+                Project Manager
+              </p>
+              <ul>
+                <li>
+                  Manage a team of 5-6 people including support, implementation, and copyrighter to drive the success strategy for clients.
+                </li>
+                <li>
+                  Foster strong relationships with C-Suite and 50+ client accounts to develop and nurture long-term growth
+                </li>
+              </ul>
+              <v-row class="mt-4" justify="space-between">
+                <v-col cols="6" class="ml-2">
+                  <v-img contain position="left" :src="logoSrc('fashion-snoops')" />
+                </v-col>
+              </v-row>
+            </v-card-text>
           </v-card>
         </v-col>
       </v-row>
     </section>
 
-    <section class="my-16">
+    <section class="py-10 my-16" id="contact">
       <v-row justify="center" align="center" class="text-center">
         <v-col cols="12" class="font-weight-bold">
-          Stay Conencted
+          Stay Connected
         </v-col>
         <v-col cols="12">
           <span class="caption grey--text">
@@ -124,45 +180,17 @@
 
 <script>
 import ShadowHeading from '@/components/ShadowHeading.vue'
+import GoogleMap from '@/components/GoogleMap.vue'
+
 export default {
   name: 'IndexPage',
 
   components: {
-    ShadowHeading
+    ShadowHeading,
+    GoogleMap
   },
 
-  data: () => ({
-    mapCenter: {
-      lat: 21.4763781213036,
-      lng: 93.9826542277434
-    },
-    implementations: [{
-      position: {
-        lat: 11.1085,
-        lng: 77.3411
-      }
-    }, {
-      position: {
-        lat: 12.8797,
-        lng: 121.7740
-      }
-    }, {
-      position: {
-        lat: 14.0583,
-        lng: 108.2772
-      }
-    }, {
-      position: {
-        lat: 23.6850,
-        lng: 90.3563
-      }
-    }, {
-      position: {
-        lat: 13.7563,
-        lng: 100.5018
-      }
-    }]
-  }),
+  data: () => ({}),
 
   computed: {
     mailingAddress () {
@@ -175,6 +203,12 @@ export default {
 
     medium () {
       return 'https://medium.com/@ruchiraj'
+    }
+  },
+
+  methods: {
+    logoSrc (logo) {
+      return require(`@/assets/logos/${logo}.png`)
     }
   }
 }

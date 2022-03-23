@@ -3,7 +3,6 @@
     <v-navigation-drawer
       v-model="drawer"
       right
-      floating
       app
     >
       <v-list>
@@ -14,11 +13,8 @@
           router
           exact
         >
-          <v-list-item-action>
-            <v-icon>{{ item.icon }}</v-icon>
-          </v-list-item-action>
           <v-list-item-content>
-            <v-list-item-title v-text="item.title" />
+            <v-list-item-title class="text-h5 py-4 font-weight-bold" v-text="item.title" />
           </v-list-item-content>
         </v-list-item>
       </v-list>
@@ -29,7 +25,7 @@
       fixed
       app
     >
-      <v-toolbar-title v-text="title" />
+      <v-toolbar-title class="text-h3 py-2 px-10" v-text="title" />
       <v-spacer />
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
     </v-app-bar>
@@ -48,34 +44,47 @@
 </template>
 
 <script>
+import goTo from 'vuetify/lib/services/goto'
+
 export default {
   name: 'DefaultLayout',
   data () {
     return {
-      clipped: false,
       drawer: false,
-      fixed: false,
-      items: [
-        {
-          icon: 'mdi-apps',
-          title: 'Work',
-          to: '#work'
-        },
-        {
-          icon: 'mdi-chart-bubble',
-          title: 'Passion',
-          to: '#passion'
-        },
-        {
-          icon: 'mdi-chart-bubble',
-          title: 'Contact',
-          to: '#contact'
-        }
-      ],
-      miniVariant: false,
-      right: true,
-      rightDrawer: false,
-      title: 'Ruchi Raj'
+      items: [{
+        title: 'About',
+        to: '#about'
+      }, {
+        title: 'Onboardings',
+        to: '#onboardings'
+      }, {
+        title: 'Work',
+        to: '#work'
+      }, {
+        title: 'Passion',
+        to: '#passion'
+      }, {
+        title: 'Education',
+        to: '#education'
+      }, {
+        title: 'Certifications',
+        to: '#certifications'
+      }, {
+        title: 'Contact',
+        to: '#contact'
+      }],
+      title: 'RR'
+    }
+  },
+
+  methods: {
+    scrollTo (target) {
+      const options = {
+        offset: -70,
+        duration: 500,
+        easing: 'easeInOutCubic'
+      }
+      return goTo(target, options)
     }
   }
 }
