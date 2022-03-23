@@ -21,7 +21,8 @@ export default {
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap' }
     ]
   },
 
@@ -31,6 +32,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    '~/plugins/maps.js'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -60,7 +62,10 @@ export default {
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
     theme: {
-      dark: true,
+      font: {
+        family: 'Open Sans',
+      },
+      // dark: true,
       themes: {
         dark: {
           primary: colors.blue.darken2,
