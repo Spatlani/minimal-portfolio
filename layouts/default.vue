@@ -52,8 +52,8 @@ export default {
         title: 'About',
         to: '#about'
       }, {
-        title: 'Onboardings',
-        to: '#onboardings'
+        title: 'Implementations',
+        to: '#implementations'
       }, {
         title: 'Work',
         to: '#work'

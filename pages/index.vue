@@ -1,7 +1,7 @@
 <template>
   <v-sheet>
     <section id="about" class="py-10 my-16">
-      <about :mailing-address="mailingAddress" />
+      <about :mailing-address="mailingAddress" :linkedin="linkedin" />
     </section>
 
     <section class="py-10 my-16">
@@ -49,8 +49,8 @@
       </v-row>
     </section>
 
-    <section id="onboardings" class="py-10 my-16">
-      <shadow-heading text="Onboardings" />
+    <section id="implementations" class="py-10 my-16">
+      <shadow-heading text="Implementations" />
       <google-map />
     </section>
 
@@ -61,12 +61,22 @@
 
     <section id="internship" class="py-10 my-16">
       <shadow-heading text="Internships" />
-      <internship />
+      <expansion-panel :items="companies" />
     </section>
 
     <section id="passion" class="py-10 my-16">
       <shadow-heading text="Passion" />
       <passion />
+    </section>
+
+    <section id="education" class="py-10 my-16">
+      <shadow-heading text="Education" />
+      <expansion-panel :items="education" />
+    </section>
+
+    <section id="certifications" class="py-10 my-16">
+      <shadow-heading text="Certifications" />
+      <expansion-panel :items="certifications" />
     </section>
 
     <section id="contact" class="py-10 my-16">
@@ -85,11 +95,21 @@
           </p>
         </v-col>
         <v-col cols="12">
-          <v-btn color="success" fab text :href="linkedin" target="_blank">
-            In
+          <v-btn
+            small
+            text
+            fab
+            :href="linkedin"
+            target="_blank">
+            <v-img max-height="20" max-width="20" contain :src="logoSrc('linkedin')" />
           </v-btn>
-          <v-btn color="success" fab text :href="medium" target="_blank">
-            Med
+          <v-btn
+            small
+            text
+            fab
+            :href="medium"
+            target="_blank">
+            <v-img max-height="20" max-width="20" contain :src="logoSrc('medium')" />
           </v-btn>
         </v-col>
       </v-row>
@@ -103,7 +123,7 @@ import About from '@/components/About.vue'
 import Work from '@/components/Work.vue'
 import Passion from '@/components/Passion.vue'
 import GoogleMap from '@/components/GoogleMap.vue'
-import Internship from '~/components/Internship.vue'
+import ExpansionPanel from '@/components/ExpansionPanel.vue'
 
 export default {
   name: 'IndexPage',
@@ -112,13 +132,98 @@ export default {
     ShadowHeading,
     About,
     Work,
-    Internship,
+    ExpansionPanel,
     Passion,
     GoogleMap
   },
 
   data: () => ({
-    activeWork: 0
+    activeWork: 0,
+    companies: [{
+      name: 'Shahi Exports',
+      color: 'grey lighten-5',
+      from: 'June 2016',
+      role: 'Intern',
+      location: 'New Delhi, India',
+      logo: 'raymond.png',
+      responsibilities: 'Created 5 training modules for the entirely new cell "Supervisor Development Cell" which is currently live In Shahi Exports pan india',
+      url: 'https://www.shahi.co.in/'
+    }, {
+      name: 'Raymond Limited',
+      color: '#d6233812',
+      from: 'August 2015',
+      role: 'Intern',
+      location: 'New Delhi, India',
+      logo: 'raymond.png',
+      responsibilities: 'Moj kri mne bhot',
+      url: 'https://www.raymond.in/'
+    }, {
+      name: 'Newgen Payments',
+      color: '#39116f14',
+      from: 'Feb 2015',
+      role: 'HR',
+      location: 'New Delhi, India',
+      logo: 'newgen.png',
+      responsibilities: 'Shaadi krne gyi thi',
+      url: 'https://www.newgenpayments.com/'
+    }],
+    education: [{
+      name: 'National Institute of Fashion Technology',
+      color: 'grey lighten-5',
+      from: '2013',
+      to: '2017',
+      role: 'Bachelors in Fashion Technology (8.0 CGPA)',
+      location: 'New Delhi, India',
+      logo: 'nift.svg',
+      responsibilities: [
+        'Most innovative Graduation Project Award, NIFT Delhi, Govt. Of India (Nominated for patent filing)',
+        'AIR rank 9 in NIFT entrance',
+        'Placement co-ordinator',
+        'Member of Social Club at NIFT, Delhi'
+      ],
+      url: 'https://www.nift.ac.in/delhi/'
+    }, {
+      name: 'Patna Women\'s College',
+      color: 'grey lighten-5',
+      from: '2013',
+      role: 'Diploma in Office Management',
+      location: 'Patna, India'
+    }, {
+      name: 'BD Public School',
+      color: 'grey lighten-5',
+      from: '2012',
+      role: 'XII - CBSE (80%)',
+      location: 'Patna, India'
+    }, {
+      name: 'Carmel High School',
+      color: 'grey lighten-5',
+      from: '2010',
+      role: 'X - ICSE (94%)',
+      responsibilities: [
+        'State level winner in karate championship (Jharkhand)',
+        'Top scorer in English and Hindi',
+        'Winner in card making competition for Indian Army',
+        'Discipline Head at School'
+      ],
+      location: 'Patna, India'
+    }],
+    certifications: [{
+      name: 'LinkedIn',
+      color: 'grey lighten-5',
+      role: 'Design thinking: Customer experience'
+    }, {
+      name: 'UNO',
+      color: 'grey lighten-5',
+      role: 'Certification in Humanitarian '
+    }, {
+      name: 'IAPO (2020)',
+      color: 'grey lighten-5',
+      role: 'Certification in Image Consultation '
+    }, {
+      name: 'CSA',
+      color: 'grey lighten-5',
+      role: 'Associate member of Customer Success Association '
+    }]
   }),
 
   computed: {

@@ -6,7 +6,7 @@
           Hi, I am Ruchi Raj
         </v-col>
         <v-col cols="12" class="text-h6 font-weight-bold">
-          Onboarding Specialist and Customer Success Manager
+          Implementation Specialist and Customer Success Manager
         </v-col>
         <v-col cols="12" class="text-justify body-2">
           Result-driven and detailed oriented professional holding 5+ years of experience with various SAAS platforms
@@ -17,6 +17,14 @@
         <v-col cols="12" class="text-justify body-2">
           <v-btn elevation="0" class="text-capitalize" outlined :href="mailingAddress">
             Get in touch!
+          </v-btn>
+          <v-btn
+            small
+            text
+            fab
+            :href="linkedin"
+            target="_blank">
+            <v-img max-height="20" max-width="20" contain :src="logoSrc('linkedin')" />
           </v-btn>
         </v-col>
       </v-row>
@@ -62,6 +70,17 @@ export default {
     mailingAddress: {
       type: String,
       default: ''
+    },
+
+    linkedin: {
+      type: String,
+      default: ''
+    }
+  },
+
+  methods: {
+    logoSrc (logo) {
+      return require(`@/assets/logos/${logo}.png`)
     }
   }
 }
