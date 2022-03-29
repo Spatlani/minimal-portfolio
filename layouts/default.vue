@@ -34,10 +34,7 @@
         <Nuxt />
       </v-container>
     </v-main>
-    <v-footer
-      :absolute="!fixed"
-      app
-    >
+    <v-footer app absolute>
       <span>&copy; {{ new Date().getFullYear() }} All Rights Reserved</span>
     </v-footer>
   </v-app>
