@@ -2,17 +2,18 @@
   <v-row>
     <v-col>
       <v-card flat height="400" rounded>
-        <GmapMap :center="mapCenter" :zoom="4" style="width: 100%; height: 100%">
+        <GmapMap :center="mapCenter" :zoom="4" :options="mapStyle" style="width: 100%; height: 100%">
           <GmapMarker
-            :key="index"
             v-for="(m, index) in implementations"
+            :key="index"
             :position="m.position"
             :clickable="true"
+            :icon="m.icon"
             @click="openInfoWindow(index)"
           >
-          <gmap-info-window :options="infoWindow.options" :position="infoWindow.position" :opened="infoWindow.open === index" @closeclick="infoWindow.open=false">
+            <gmap-info-window :options="infoWindow.options" :position="infoWindow.position" :opened="infoWindow.open === index" @closeclick="infoWindow.open=false">
               <div v-html="infoWindow.template" />
-          </gmap-info-window>
+            </gmap-info-window>
           </GmapMarker>
         </GmapMap>
       </v-card>
@@ -21,6 +22,8 @@
 </template>
 
 <script>
+import styles from '@/store/map-styles.json'
+
 export default {
   data: () => ({
     activeInfoWindow: null,
@@ -38,62 +41,62 @@ export default {
       lng: 93.9826542277434
     },
     implementations: [{
+      icon: 'https://maps.google.com/mapfiles/ms/icons/blue-dot.png',
       position: {
         lat: 11.1085,
         lng: 77.3411
-      }
+      },
+      city: 'Tiruppur',
+      country: 'India',
+      image: 'bangkok.jpg'
     }, {
+      icon: 'https://maps.google.com/mapfiles/ms/icons/blue-dot.png',
       position: {
         lat: 12.8797,
         lng: 121.7740
-      }
+      },
+      city: 'Philippines',
+      country: 'Philippines',
+      image: 'bangkok.jpg'
     }, {
+      icon: 'https://maps.google.com/mapfiles/ms/icons/blue-dot.png',
       position: {
         lat: 14.0583,
         lng: 108.2772
-      }
+      },
+      city: 'Vietnam',
+      country: 'Vietnam',
+      image: 'vietnam.jpeg'
     }, {
+      icon: 'https://maps.google.com/mapfiles/ms/icons/blue-dot.png',
       position: {
         lat: 23.6850,
         lng: 90.3563
-      }
+      },
+      city: 'Dhaka',
+      country: 'Bangladesh',
+      image: 'bangkok.jpg'
     }, {
+      icon: 'https://maps.google.com/mapfiles/ms/icons/blue-dot.png',
       position: {
         lat: 13.7563,
         lng: 100.5018
-      }
-    }]
+      },
+      city: 'Bangkok',
+      country: 'Thailand',
+      image: 'bangkok.jpg'
+    }],
+    mapStyle: { styles }
   }),
 
   methods: {
     openInfoWindow (index) {
-      const { lat, lng, name, street, zip, city } = this.implementations[index]
-      this.infoWindow.position = { lat, lng }
-      this.infoWindow.template = `<b>${name}</b><br>${street}<br>${zip} ${city}<br>`
+      const { position, city, country, image } = this.implementations[index]
+      this.infoWindow.position = position
+      const imageSrc = require(`@/assets/images/${image}`)
+      this.infoWindow.template = `<br><img src="${imageSrc}" style="max-height: 150px; max-width: 200px;" /><br><b>${city}, ${country}</b>`
       this.infoWindow.open = index
     }
   }
 }
 </script>
-
-<style>
-.bg-text {
-  height: 4em;
-}
-.bg-text .row {
-  position: relative;
-}
-.bg-text::before {
-  content: attr(data-bg-text);
-  position: absolute;
-  height: max-content;
-  line-height: 1.4;
-  opacity: 0.02;
-  color: var(--v-secondary-lighten5);
-  font-size: 6em;
-  margin-top: 16px;
-  margin-left: -1em;
-  white-space: nowrap;
-  overflow: hidden;
-}
-</style>

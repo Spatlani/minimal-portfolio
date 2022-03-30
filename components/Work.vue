@@ -1,6 +1,6 @@
 <template>
   <v-row>
-    <v-col v-for="company in companies" :key="company.name" cols="6">
+    <v-col v-for="company in companies" :key="company.name" md="6">
       <v-card :color="company.color" flat class="rounded">
         <v-card-text>
           <div class="text-overline mb-3">
@@ -23,7 +23,15 @@
           </ul>
           <v-row class="mt-4" align="center" justify="space-between">
             <v-col cols="6" class="pl-6">
-              <v-img :src="logoSrc(company.logo)" max-width="250" max-height="50" contain position="left" />
+              <a :href="company.url" target="_blank" class="text-decoration-none">
+                <v-img
+                  :src="logoSrc(company.logo)"
+                  max-width="250"
+                  max-height="50"
+                  contain
+                  position="left"
+                />
+              </a>
             </v-col>
             <v-col cols="auto">
               <v-btn x-small text fab :href="company.url" target="_blank">
@@ -50,7 +58,7 @@ export default {
       color: '#2d4ea214',
       from: 'Feb 2022',
       to: 'Present',
-      role: 'Senior customer success manager',
+      role: 'Customer success manager',
       location: 'US, Remote',
       logo: 'provana.webp',
       responsibilities: [
@@ -63,7 +71,7 @@ export default {
       color: '#0dd5b21a',
       from: 'April 2019',
       to: 'Present',
-      role: 'Senior customer success manager',
+      role: 'Senior implementation manager',
       location: 'US, Remote',
       logo: 'techpacker.png',
       responsibilities: [

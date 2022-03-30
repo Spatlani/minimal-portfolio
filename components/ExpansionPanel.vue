@@ -16,13 +16,13 @@
             </v-col>
             <v-col cols="6" class="text--secondary">
               <v-row no-gutters style="width: 100%" justify="end">
-                <v-col cols="6">
+                <v-col md="6">
                   {{ item.from }}
                   <span v-if="item.to">
                     - {{ item.to }}
                   </span>
                 </v-col>
-                <v-col cols="4">
+                <v-col md="4">
                   {{ item.location }}
                 </v-col>
               </v-row>

@@ -5,43 +5,43 @@
     </section>
 
     <section class="py-10 my-16">
-      <v-row>
-        <v-col cols="3">
-          <v-row>
-            <v-col cols="auto" class="text-h3 font-weight-bold">
+      <v-row align="center">
+        <v-col cols="12" sm="6" md="3">
+          <v-row align="center">
+            <v-col cols="4" class="text-h4 font-weight-bold">
               5+
             </v-col>
-            <v-col cols="1">
+            <v-col cols="8">
               Years Experience
             </v-col>
           </v-row>
         </v-col>
-        <v-col cols="3">
-          <v-row>
-            <v-col cols="auto" class="text-h3 font-weight-bold">
+        <v-col cols="12" sm="6" md="3">
+          <v-row align="center">
+            <v-col cols="4" class="text-h4 font-weight-bold">
               102
             </v-col>
-            <v-col cols="1">
+            <v-col cols="8">
               Happy Clients
             </v-col>
           </v-row>
         </v-col>
-        <v-col cols="3">
-          <v-row>
-            <v-col cols="auto" class="text-h3 font-weight-bold">
-              7
+        <v-col cols="12" sm="6" md="3">
+          <v-row align="center">
+            <v-col cols="4" class="text-h4 font-weight-bold">
+              10+
             </v-col>
-            <v-col cols="9">
+            <v-col cols="8">
               On-Site implementation in 5 Countries
             </v-col>
           </v-row>
         </v-col>
-        <v-col cols="3">
-          <v-row>
-            <v-col cols="auto" class="text-h3 font-weight-bold">
-              256
+        <v-col cols="12" sm="6" md="3">
+          <v-row align="center">
+            <v-col cols="4" class="text-h4 font-weight-bold">
+              250+
             </v-col>
-            <v-col cols="7">
+            <v-col cols="8">
               Online onboardings in 20 Countries
             </v-col>
           </v-row>
@@ -81,6 +81,23 @@
 
     <section id="contact" class="py-10 my-16">
       <v-row justify="center" align="center" class="text-center">
+        <v-col cols="7">
+          <v-card flat color="grey lighten-4" class="pa-4">
+            <v-card-title primary-title>
+              <p class="mx-auto mb-1">
+                Drop a message!
+              </p>
+            </v-card-title>
+            <v-card-text>
+              Let's work together and I'll help you strategize your next project.
+            </v-card-text>
+            <v-card-actions>
+              <v-btn elevation="0" class="mx-auto text-capitalize" outlined :href="mailingAddress">
+                Get in touch!
+              </v-btn>
+            </v-card-actions>
+          </v-card>
+        </v-col>
         <v-col cols="12" class="font-weight-bold">
           Stay Connected
         </v-col>
@@ -145,7 +162,7 @@ export default {
       from: 'June 2016',
       role: 'Intern',
       location: 'New Delhi, India',
-      logo: 'raymond.png',
+      logo: 'shahi.png',
       responsibilities: 'Created 5 training modules for the entirely new cell "Supervisor Development Cell" which is currently live In Shahi Exports pan india',
       url: 'https://www.shahi.co.in/'
     }, {

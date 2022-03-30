@@ -3,21 +3,24 @@
     <v-navigation-drawer
       v-model="drawer"
       right
+      temporary
       app
     >
-      <v-list>
-        <v-list-item
-          v-for="(item, i) in items"
-          :key="i"
-          :to="item.to"
-          router
-          exact
-        >
-          <v-list-item-content>
-            <v-list-item-title class="text-h5 py-4 font-weight-bold" v-text="item.title" />
-          </v-list-item-content>
-        </v-list-item>
-      </v-list>
+      <v-row align="center" justify="center" class="fill-height">
+        <v-list class="height-max-content">
+          <v-list-item
+            v-for="(item, i) in items"
+            :key="i"
+            :to="item.to"
+            router
+            exact
+          >
+            <v-list-item-content>
+              <v-list-item-title class="text-h5 py-4 font-weight-bold" v-text="item.title" />
+            </v-list-item-content>
+          </v-list-item>
+        </v-list>
+      </v-row>
     </v-navigation-drawer>
     <v-app-bar
       color="white"
@@ -25,9 +28,14 @@
       fixed
       app
     >
-      <v-toolbar-title class="text-h3 py-2 px-10" v-text="title" />
-      <v-spacer />
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
+      <v-row align="center" justify="space-between" no-gutters>
+        <v-col cols="auto">
+          <v-toolbar-title class="text-h3 pa-2" v-text="title" />
+        </v-col>
+        <v-col cols="auto">
+          <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
+        </v-col>
+      </v-row>
     </v-app-bar>
     <v-main>
       <v-container>
@@ -35,7 +43,14 @@
       </v-container>
     </v-main>
     <v-footer app absolute>
-      <span>&copy; {{ new Date().getFullYear() }} All Rights Reserved</span>
+      <v-row class="caption" justify="space-between" no-gutters>
+        <v-col cols="auto">
+          Made with ❤️ in India
+        </v-col>
+        <v-col cols="auto">
+          &copy; {{ new Date().getFullYear() }} All Rights Reserved
+        </v-col>
+      </v-row>
     </v-footer>
   </v-app>
 </template>
@@ -86,3 +101,9 @@ export default {
   }
 }
 </script>
+
+<style>
+.height-max-content {
+  height: max-content;
+}
+</style>
