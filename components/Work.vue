@@ -35,7 +35,7 @@
             </v-col>
             <v-col cols="auto">
               <v-btn x-small text fab :href="company.url" target="_blank">
-                <v-icon >
+                <v-icon>
                   mdi-open-in-new
                 </v-icon>
               </v-btn>
@@ -76,7 +76,8 @@ export default {
       logo: 'techpacker.png',
       responsibilities: [
         'Manage a team of 5-6 people including support, implementation, and copyrighter to drive the success strategy for clients.',
-        'Foster strong relationships with C-Suite and 50+ client accounts to develop and nurture long-term growth'
+        'Foster strong relationships with C-Suite and 50+ client accounts to develop and nurture long-term growth.',
+        'Achieved almost 100% automation in onboarding for non-enterprise users (1000+) working on the knowledge base/ resources/onboarding campaigns'
       ],
       url: 'https://techpacker.com/'
     }, {
@@ -88,8 +89,10 @@ export default {
       location: 'US, Remote',
       logo: 'fashion-snoops.png',
       responsibilities: [
-        'Manage a team of 5-6 people including support, implementation, and copyrighter to drive the success strategy for clients.',
-        'Foster strong relationships with C-Suite and 50+ client accounts to develop and nurture long-term growth'
+        'Successfully introduced the brand to the Indian market.',
+        'Implemented the platform successfully in 8 organizations.',
+        'Negotiated with Apparel Resources(leading publication in apparel and fashion domain, India), for being their Trend Partner in Global Sourcing event in Bangalore called Apparel Sourcing Week.',
+        'Partnered with FDCI for a workshop in Lotus India Fashion Week.'
       ],
       url: 'https://www.fashionsnoops.com/'
     }, {
@@ -101,8 +104,9 @@ export default {
       location: 'APAC, Onsite',
       logo: 'threadsol.png',
       responsibilities: [
-        'Manage a team of 5-6 people including support, implementation, and copyrighter to drive the success strategy for clients.',
-        'Foster strong relationships with C-Suite and 50+ client accounts to develop and nurture long-term growth'
+        'Achieved successful implementations of the flagship product Intellocut in 8 factories on-site in Vietnam, Bangladesh, The Philippines, India, China, Bangkok, etc.',
+        'Trained 250+ users in Southeast Asian countries.',
+        'Reduced the churn by 20% by identifying discrepancies in customers’ data and creating the format of the tool to monitor them'
       ],
       url: 'https://coats.com/en/Acquisitions/Companies/ThreadSol'
     }]
