@@ -55,7 +55,7 @@ export default {
         lat: 12.8797,
         lng: 121.7740
       },
-      city: 'Philippines',
+      city: 'Manila',
       country: 'Philippines',
       image: 'bangkok.jpg'
     }, {
@@ -64,7 +64,7 @@ export default {
         lat: 14.0583,
         lng: 108.2772
       },
-      city: 'Vietnam',
+      city: 'Ho Chi Minh',
       country: 'Vietnam',
       image: 'vietnam.jpeg'
     }, {

@@ -35,7 +35,7 @@ export default {
   data: () => ({
     passion: [{
       description: 'I am working on creating a community for women to promote Indian handicrafts and enhance the chances of employment to them by my homegrown brand KraftSquare.',
-      image: 'kraftsquare.webp',
+      image: 'kraftsquare.jpg',
       url: 'https://kraftsquare.com/'
     }, {
       description: 'I offer sessions on personality and image enhancement to the students/members of NGOs and other social organizations.',

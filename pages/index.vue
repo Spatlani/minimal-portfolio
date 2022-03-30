@@ -19,7 +19,7 @@
         <v-col cols="12" sm="6" md="3">
           <v-row align="center">
             <v-col cols="4" class="text-h4 font-weight-bold">
-              102
+              300+
             </v-col>
             <v-col cols="8">
               Happy Clients
@@ -81,7 +81,7 @@
 
     <section id="contact" class="py-10 my-16">
       <v-row justify="center" align="center" class="text-center">
-        <v-col cols="7">
+        <v-col md="8" cols="12">
           <v-card flat color="grey lighten-4" class="pa-4">
             <v-card-title primary-title>
               <p class="mx-auto mb-1">

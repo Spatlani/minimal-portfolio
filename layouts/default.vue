@@ -6,7 +6,7 @@
       temporary
       app
     >
-      <v-row align="center" justify="center" class="fill-height">
+      <v-row align="center" justify="center" :class="{ 'fill-height': $vuetify.breakpoint.smAndUp }">
         <v-list class="height-max-content">
           <v-list-item
             v-for="(item, i) in items"
@@ -27,15 +27,12 @@
       flat
       fixed
       app
+      outlined
+      elevate-on-scroll
     >
-      <v-row align="center" justify="space-between" no-gutters>
-        <v-col cols="auto">
-          <v-toolbar-title class="text-h3 pa-2" v-text="title" />
-        </v-col>
-        <v-col cols="auto">
-          <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-        </v-col>
-      </v-row>
+      <v-toolbar-title class="text-h3 pa-2" v-text="title" />
+      <v-spacer />
+      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
     </v-app-bar>
     <v-main>
       <v-container>

@@ -4,25 +4,25 @@
       <v-expansion-panel v-for="item in items" :key="item.name" :readonly="!item.responsibilities" class="mb-1" :class="{ 'pointer-none': !item.responsibilities }">
         <v-expansion-panel-header v-slot="{ open }" :color="item.color">
           <v-row no-gutters align="center">
-            <v-col cols="6">
+            <v-col cols="12" md="6">
               <p class="text-h6 text--primary mb-0">
                 {{ item.role }}
               </p>
               <v-fade-transition leave-absolute>
-                <span v-if="!open" class="text--secondary">
+                <span v-if="!open" class="text--secondary font-weight-medium">
                   {{ item.name }}
                 </span>
               </v-fade-transition>
             </v-col>
-            <v-col cols="6" class="text--secondary">
+            <v-col cols="12" md="6" class="mt-2 mt-sm-0 text--secondary">
               <v-row no-gutters style="width: 100%" justify="end">
-                <v-col md="6">
+                <v-col cols="6" md="6">
                   {{ item.from }}
                   <span v-if="item.to">
                     - {{ item.to }}
                   </span>
                 </v-col>
-                <v-col md="4">
+                <v-col cols="6" md="4">
                   {{ item.location }}
                 </v-col>
               </v-row>

@@ -1,5 +1,5 @@
 <template>
-  <h1 class="bg-text d-flex align-center" :data-bg-text="text">
+  <h1 class="bg-text d-flex align-center overflow-hidden position-relative" :data-bg-text="text">
     <v-container class="pa-0">
       <v-row class="no-gutters">
         <v-col cols="8">
@@ -30,12 +30,18 @@ export default {
 </script>
 
 <style>
+.position-relative {
+  position: relative;
+}
+
 .bg-text {
   height: 4em;
 }
+
 .bg-text .row {
   position: relative;
 }
+
 .bg-text::before {
   content: attr(data-bg-text);
   position: absolute;

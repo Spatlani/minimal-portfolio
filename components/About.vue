@@ -14,7 +14,7 @@
           the opportunity at Techpacker to boost premium customer satisfaction with 90% positive feedback and
           automate the non-enterprise customer onboarding and journey.
         </v-col>
-        <v-col cols="12" class="text-justify body-2">
+        <v-col cols="12" class="body-2">
           <v-btn elevation="0" class="text-capitalize" outlined :href="mailingAddress">
             Get in touch!
           </v-btn>
@@ -32,14 +32,14 @@
     <v-col cols="12" md="4">
       <v-row>
         <v-col
-          v-for="n in 9"
-          :key="n"
+          v-for="image in imageGrid"
+          :key="image"
           class="d-flex child-flex"
           cols="4"
         >
           <v-img
-            :src="`https://picsum.photos/500/300?image=${n * 5 + 10}`"
-            :lazy-src="`https://picsum.photos/10/6?image=${n * 5 + 10}`"
+            :src="imgSrc(image)"
+            :lazy-src="imgSrc(image)"
             aspect-ratio="1"
             class="grey lighten-2"
           >
@@ -78,9 +78,27 @@ export default {
     }
   },
 
+  data: () => ({
+    imageGrid: [
+      'vietnam.jpeg',
+      'bangkok-2.jpg',
+      'kraftsquare.jpg',
+      'bangkok-3.jpg',
+      'ruchi.jpeg',
+      'vietnam.jpeg',
+      'vietnam.jpeg',
+      'vietnam.jpeg',
+      'newgen.jpg'
+    ]
+  }),
+
   methods: {
     logoSrc (logo) {
       return require(`@/assets/logos/${logo}.png`)
+    },
+
+    imgSrc (img) {
+      return require(`@/assets/images/${img}`)
     }
   }
 }
