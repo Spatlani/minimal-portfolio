@@ -117,7 +117,8 @@
             text
             fab
             :href="linkedin"
-            target="_blank">
+            target="_blank"
+          >
             <v-img max-height="20" max-width="20" contain :src="logoSrc('linkedin')" />
           </v-btn>
           <v-btn
@@ -125,7 +126,8 @@
             text
             fab
             :href="medium"
-            target="_blank">
+            target="_blank"
+          >
             <v-img max-height="20" max-width="20" contain :src="logoSrc('medium')" />
           </v-btn>
         </v-col>
@@ -172,7 +174,6 @@ export default {
       role: 'Intern',
       location: 'New Delhi, India',
       logo: 'raymond.png',
-      responsibilities: 'Moj kri mne bhot',
       url: 'https://www.raymond.in/'
     }, {
       name: 'Newgen Payments',
@@ -181,7 +182,6 @@ export default {
       role: 'HR',
       location: 'New Delhi, India',
       logo: 'newgen.png',
-      responsibilities: 'Shaadi krne gyi thi',
       url: 'https://www.newgenpayments.com/'
     }],
     education: [{

@@ -30,11 +30,11 @@
       outlined
       elevate-on-scroll
     >
-      <v-toolbar-title class="text-h3 pa-2" v-text="title" />
+      <v-toolbar-title class="text-h3 pa-2" @click="scrollTo('#top')" v-text="title" />
       <v-spacer />
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
     </v-app-bar>
-    <v-main>
+    <v-main id="top">
       <v-container>
         <Nuxt />
       </v-container>
@@ -89,9 +89,10 @@ export default {
   methods: {
     scrollTo (target) {
       const options = {
-        offset: -70,
+        offset: 0,
         duration: 500,
-        easing: 'easeInOutCubic'
+        easing: 'easeInOutCubic',
+        behavior: 'smooth'
       }
       return goTo(target, options)
     }
