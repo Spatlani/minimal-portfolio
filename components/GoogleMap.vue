@@ -48,7 +48,7 @@ export default {
       },
       city: 'Tiruppur',
       country: 'India',
-      image: 'bangkok.jpg'
+      image: 'tiruppur.jpeg'
     }, {
       icon: 'https://maps.google.com/mapfiles/ms/icons/blue-dot.png',
       position: {
@@ -57,7 +57,7 @@ export default {
       },
       city: 'Manila',
       country: 'Philippines',
-      image: 'bangkok.jpg'
+      image: 'philippines.jpeg'
     }, {
       icon: 'https://maps.google.com/mapfiles/ms/icons/blue-dot.png',
       position: {
@@ -75,7 +75,7 @@ export default {
       },
       city: 'Dhaka',
       country: 'Bangladesh',
-      image: 'bangkok.jpg'
+      image: 'bangladesh.jpg'
     }, {
       icon: 'https://maps.google.com/mapfiles/ms/icons/blue-dot.png',
       position: {

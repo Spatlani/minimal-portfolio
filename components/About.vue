@@ -81,14 +81,14 @@ export default {
   data: () => ({
     imageGrid: [
       'vietnam.jpeg',
-      'bangkok-2.jpg',
-      'kraftsquare.jpg',
+      'bangkok.jpg',
+      'philippines.jpeg',
       'bangkok-3.jpg',
       'ruchi.jpeg',
-      'vietnam.jpeg',
-      'vietnam.jpeg',
-      'vietnam.jpeg',
-      'newgen.jpg'
+      'bangkok-5.jpg',
+      'katha.jpg',
+      'bangkok-4.jpg',
+      'bangladesh.jpg'
     ]
   }),
 

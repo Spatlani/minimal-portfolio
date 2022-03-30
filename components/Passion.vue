@@ -39,7 +39,7 @@ export default {
       url: 'https://kraftsquare.com/'
     }, {
       description: 'I offer sessions on personality and image enhancement to the students/members of NGOs and other social organizations.',
-      image: 'katha.jpg',
+      image: 'katha-2.jpg',
       url: 'https://www.katha.org/'
     }, {
       description: 'I write guest posts for Textile Scholars',
@@ -47,7 +47,7 @@ export default {
       url: 'https://textilesscholars.blogspot.com/2021/06/categories-of-fabric-wastes-in-apparel.html'
     }, {
       description: 'During my college, I joined as 2nd member and took it to 30+ along with a lean HR team. Assisted in building the whole team of Newgen across all the profiles including tech, marketing design, and finance',
-      image: 'newgen.jpg',
+      image: 'newgen-2.jpeg',
       url: 'https://www.newgenpayments.com/'
     }]
   }),
