@@ -3,12 +3,12 @@
     <v-col v-for="company in companies" :key="company.name" md="6">
       <v-card :color="company.color" flat class="rounded" :height="height">
         <v-card-text>
-          <div class="text-overline mb-3">
-            <v-row justify="space-between">
-              <v-col cols="auto">
+          <div class="mb-3">
+            <v-row justify="space-between" align="center" no-gutters>
+              <v-col cols="auto" class="text-overline ">
                 {{ company.from }} - {{ company.to }}
               </v-col>
-              <v-col cols="auto">
+              <v-col cols="auto" class="caption">
                 {{ company.location }}
               </v-col>
             </v-row>
@@ -159,10 +159,10 @@ export default {
       url: 'https://coats.com/en/Acquisitions/Companies/ThreadSol'
     }]
   }),
-  
+
   computed: {
     height () {
-      return this.$vuetify.breakpoint.xs ? 'auto' : '360'
+      return this.$vuetify.breakpoint.xs ? 'auto' : '380'
     }
   },
 

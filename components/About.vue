@@ -27,7 +27,8 @@
             text
             fab
             :href="linkedin"
-            target="_blank">
+            target="_blank"
+          >
             <v-img max-height="20" max-width="20" contain :src="logoSrc('linkedin')" />
           </v-btn>
         </v-col>
@@ -47,7 +48,7 @@
             aspect-ratio="1"
             class="grey lighten-2"
           >
-            <template v-slot:placeholder>
+            <template #placeholder>
               <v-row
                 class="fill-height ma-0"
                 align="center"
@@ -56,7 +57,7 @@
                 <v-progress-circular
                   indeterminate
                   color="grey lighten-5"
-                ></v-progress-circular>
+                />
               </v-row>
             </template>
           </v-img>

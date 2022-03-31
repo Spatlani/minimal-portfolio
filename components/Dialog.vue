@@ -2,12 +2,12 @@
   <v-dialog v-if="dialog" max-width="600" :value="!!dialog" @input="closeDialog">
     <v-card :color="dialog.color" flat class="rounded">
       <v-card-text class="pa-6">
-        <div class="text-overline mb-3">
-          <v-row justify="space-between">
-            <v-col cols="auto">
+        <div class="mb-3">
+          <v-row justify="space-between" align="center" no-gutters>
+            <v-col cols="auto" class="text-overline">
               {{ dialog.from }} - {{ dialog.to }}
             </v-col>
-            <v-col cols="5" class="text-right">
+            <v-col cols="auto" class="caption">
               {{ dialog.location }}
             </v-col>
           </v-row>
@@ -25,8 +25,8 @@
           </v-col>
         </v-row>
 
-        <v-row align="center" justify="space-between">
-          <v-col cols="auto" class="pl-6">
+        <v-row align="center" justify="space-between" no-gutters>
+          <v-col cols="10" class="pl-6">
             <a :href="dialog.url" target="_blank" class="text-decoration-none">
               <v-img
                 :src="logoSrc(dialog.logo)"
