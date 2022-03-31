@@ -7,7 +7,7 @@
             <v-col cols="auto">
               {{ dialog.from }} - {{ dialog.to }}
             </v-col>
-            <v-col cols="5">
+            <v-col cols="5" class="text-right">
               {{ dialog.location }}
             </v-col>
           </v-row>
@@ -37,7 +37,7 @@
               />
             </a>
           </v-col>
-          <v-col cols="2">
+          <v-col cols="2" class="text-right">
             <v-btn x-small text fab :href="dialog.url" target="_blank">
               <v-icon>
                 mdi-open-in-new
