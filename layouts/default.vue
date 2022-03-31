@@ -16,7 +16,7 @@
             exact
           >
             <v-list-item-content>
-              <v-list-item-title class="text-h5 py-4 font-weight-bold" v-text="item.title" />
+              <v-list-item-title class="font-weight-bold" :class="{ 'text-h6 py-3' : $vuetify.breakpoint.xs, 'text-h5 py-2' : !$vuetify.breakpoint.xsAndUp }" v-text="item.title" />
             </v-list-item-content>
           </v-list-item>
         </v-list>
