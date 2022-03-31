@@ -54,7 +54,7 @@ export default {
 
   computed: {
     height () {
-      return this.$vuetify.breakpoint.xs ? '340' : '380'
+      return this.$vuetify.breakpoint.xs ? 'auto' : '380'
     }
   },
 
