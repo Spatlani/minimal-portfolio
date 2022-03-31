@@ -202,13 +202,8 @@ export default {
       location: 'New Delhi, India',
       logo: 'shahi.png',
       responsibilities: [
-        'Worked on a live-project "Supervisor Development Cell" which was a completely new cell being introduced into Shahi. As a part of the organisational behaviour team, I developed and designed various modules of supervisor development cell',
-        'The modules are:',
-        'Supervisor monitoring tool',
-        'Training modules',
-        'Selection criteria',
-        'Monitoring tools',
-        'Developing a machine matrix for standardising the process'
+        'Worked on a live-project "Supervisor Development Cell" which was a completely new cell being introduced into Shahi. As a part of the organisational behaviour team, I developed and designed various modules of supervisor development cell.',
+        'The modules created are Supervisor monitoring tool, Training modules, Selection criteria, Monitoring tools and Developing a machine matrix for standardising the process.'
       ],
       url: 'https://www.shahi.co.in/'
     }, {
