@@ -1,7 +1,7 @@
 <template>
   <v-row>
     <v-col v-for="(p, pIndex) in passion" :key="pIndex" md="3" sm="12">
-      <v-card height="380" color="grey lighten-5" rounded flat>
+      <v-card :height="height" color="grey lighten-5" rounded flat>
         <v-card-text>
           <v-row align="center" justify="center">
             <v-col cols="12">
@@ -51,6 +51,12 @@ export default {
       url: 'https://www.newgenpayments.com/'
     }]
   }),
+
+  computed: {
+    height () {
+      return this.$vuetify.breakpoint.xs ? '340' : '380'
+    }
+  },
 
   methods: {
     imgSrc (img) {

@@ -35,11 +35,9 @@
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
     </v-app-bar>
     <v-main id="top">
-      <v-container>
-        <Nuxt />
-      </v-container>
+      <Nuxt />
     </v-main>
-    <v-footer app absolute>
+    <v-footer dark app absolute>
       <v-row class="caption" justify="space-between" no-gutters>
         <v-col cols="auto">
           Made with ❤️ in India

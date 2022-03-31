@@ -74,8 +74,17 @@ export default {
       location: 'US, Remote',
       logo: 'provana.webp',
       responsibilities: [
-        'Manage a team of 5-6 people including support, implementation, and copyrighter to drive the success strategy for clients.',
-        'Foster strong relationships with C-Suite and 50+ client accounts to develop and nurture long-term growth'
+        'Assessing/evaluating client needs for the initial scope of the project, determining project plan, and scheduling agenda with curriculum for training.',
+        'Tracking implementation and IPACS usage to identify and provide proactive support.',
+        'Assist other team members with client engagements when appropriate with a strong focus on the team environment.',
+        'Ensure customer satisfaction on audit and compliance products and services through follow-up, client responsiveness, and thorough communication.',
+        'Continuously improvising the implementation process for making it easier and more efficient.',
+        'Manage multiple client implementations and projects/tasks simultaneously.',
+        'Responsible for managing client expectations and building strong relationships.',
+        'Promote and upsell other modules and services of IPACS.',
+        'Gather client feedback on audit and compliance system, convert them to system requirements and communicate to Product Manager for enhancing the product.',
+        'Manage a team of 7+ people including customer success memebrs and the product support team.',
+        'Manage client contracts, their renewals, payments, etc.'
       ],
       url: 'https://www.provana.com/'
     }, {
@@ -99,7 +108,10 @@ export default {
         'Reduced the query tickets from 500+ to 50 within the first 3 months.',
         'Written a mini-research guide article on Top sustainable fashion materials for 2021.',
         'Published 2 customer success case studies with enterprise customers',
-        'Led the product calls (cross-functionally) with tech, product development, and sales team for product enhancements and sprint planning.'
+        'Led the product calls (cross-functionally) with tech, product development, and sales team for product enhancements and sprint planning.',
+        'Assess the Client’s Needs - Design and improve the on-boarding process as per the client\'s need',
+        'Maintain knowledge base/product documentation (help desk) - Evaluate and suggest changes in base/product documentation (help desk) and other communication infrastructure to assist customers as well as internal teams.',
+        'Conflict management - Mediate between clients and the organization regarding any small or big change or feature requirement.'
       ],
       url: 'https://techpacker.com/'
     }, {
@@ -134,8 +146,15 @@ export default {
         'Achieved successful implementations of the flagship product Intellocut in 8 factories on-site in Vietnam, Bangladesh, The Philippines, India, China, Bangkok, etc.',
         'Trained 250+ users in Southeast Asian countries.',
         'Reduced the churn by 20% by identifying discrepancies in customers’ data and creating the format of the tool to monitor them',
-        'Created the product documentation of almost 20 new modules',
-        'Successfully handled queries as SPOC for 12 enterprise clients (each having 20+ users)'
+        'Created the product documentation of almost 20 new modules.',
+        'Successfully handled queries as SPOC for 12 enterprise clients (each having 20+ users)',
+        'SPOC for all the factories where implementation was done.',
+        'Analysis of the factory data and finding out the discrepancy and the critical issues in their amount of fabric dealing roll-wise if any.',
+        'Quantitative analysis of all the clients data in terms of the loopholes to improve them and retain them as a satisfied customer.',
+        'Analyse specific problems after identifying discrepancies and create the format of the tool to monitor them.',
+        'In-depth data analysis of all the statistics pre and post-resolving the discrepancy.',
+        'Translate the studied data into the analytical brief and present it to the clients mentioning the loopholes and scope of improvements.',
+        'Also, been a part of the Product Development and QA team, utilizing the gained on-floor practical experience in the enhancement of the current and new products according to the identified needs.'
       ],
       url: 'https://coats.com/en/Acquisitions/Companies/ThreadSol'
     }]

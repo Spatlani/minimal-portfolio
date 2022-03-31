@@ -1,6 +1,6 @@
 <template>
-  <v-row>
-    <v-col v-for="item in items" :key="item.logo" md="2" cols="6">
+  <v-row justify="center">
+    <v-col v-for="item in items" :key="item.logo" md="2" cols="4">
       <v-card height="200" outlined>
         <v-card-text class="pa-2">
           <v-img height="100" contain :src="logoSrc(item.logo)" :lazy-src="logoSrc(item.logo)" />

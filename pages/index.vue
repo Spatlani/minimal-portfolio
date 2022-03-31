@@ -1,147 +1,169 @@
 <template>
   <v-sheet>
-    <section id="about" class="py-10 my-16">
-      <about :mailing-address="mailingAddress" :linkedin="linkedin" />
+    <section id="about">
+      <v-container>
+        <about :mailing-address="mailingAddress" :linkedin="linkedin" />
+      </v-container>
     </section>
 
-    <section class="py-10 my-16">
-      <v-row align="center">
-        <v-col cols="12" sm="6" md="3">
-          <v-row align="center">
-            <v-col cols="4" class="text-h4 font-weight-bold">
-              5+
-            </v-col>
-            <v-col cols="8">
-              Years Experience
-            </v-col>
-          </v-row>
-        </v-col>
-        <v-col cols="12" sm="6" md="3">
-          <v-row align="center">
-            <v-col cols="4" class="text-h4 font-weight-bold">
-              300+
-            </v-col>
-            <v-col cols="8">
-              Happy Clients
-            </v-col>
-          </v-row>
-        </v-col>
-        <v-col cols="12" sm="6" md="3">
-          <v-row align="center">
-            <v-col cols="4" class="text-h4 font-weight-bold">
-              10+
-            </v-col>
-            <v-col cols="8">
-              On-Site implementation in 5 Countries
-            </v-col>
-          </v-row>
-        </v-col>
-        <v-col cols="12" sm="6" md="3">
-          <v-row align="center">
-            <v-col cols="4" class="text-h4 font-weight-bold">
-              250+
-            </v-col>
-            <v-col cols="8">
-              Online onboardings in 20 Countries
-            </v-col>
-          </v-row>
-        </v-col>
-      </v-row>
+    <section>
+      <v-container>
+        <v-row align="center">
+          <v-col cols="12" sm="6" md="3">
+            <v-row align="center">
+              <v-col cols="4" class="text-h4 font-weight-bold">
+                5+
+              </v-col>
+              <v-col cols="8">
+                Years Experience
+              </v-col>
+            </v-row>
+          </v-col>
+          <v-col cols="12" sm="6" md="3">
+            <v-row align="center">
+              <v-col cols="4" class="text-h4 font-weight-bold">
+                300+
+              </v-col>
+              <v-col cols="8">
+                Happy Clients
+              </v-col>
+            </v-row>
+          </v-col>
+          <v-col cols="12" sm="6" md="3">
+            <v-row align="center">
+              <v-col cols="4" class="text-h4 font-weight-bold">
+                10+
+              </v-col>
+              <v-col cols="8">
+                On-Site implementation in 5 Countries
+              </v-col>
+            </v-row>
+          </v-col>
+          <v-col cols="12" sm="6" md="3">
+            <v-row align="center">
+              <v-col cols="4" class="text-h4 font-weight-bold">
+                250+
+              </v-col>
+              <v-col cols="8">
+                Online onboardings in 20 Countries
+              </v-col>
+            </v-row>
+          </v-col>
+        </v-row>
+      </v-container>
     </section>
 
-    <section id="implementations" class="py-10 my-16">
-      <shadow-heading text="Implementations" />
-      <google-map />
+    <section id="implementations">
+      <v-container>
+        <shadow-heading text="Implementations" />
+        <google-map />
+      </v-container>
     </section>
 
-    <section id="work" class="py-10 my-16">
-      <shadow-heading text="Work" />
-      <work />
+    <section id="work">
+      <v-container>
+        <shadow-heading text="Work" />
+        <work />
+      </v-container>
     </section>
 
-    <section id="tools" class="py-10 my-16">
-      <shadow-heading text="Tools" />
-      <grid-showcase />
+    <section id="tools">
+      <v-container>
+        <shadow-heading text="Tools" />
+        <grid-showcase />
+      </v-container>
     </section>
 
-    <section id="internship" class="py-10 my-16">
-      <shadow-heading text="Internships" />
-      <expansion-panel :items="companies" />
+    <section id="internship">
+      <v-container>
+        <shadow-heading text="Internships" />
+        <expansion-panel :items="companies" />
+      </v-container>
     </section>
 
-    <section id="passion" class="py-10 my-16">
-      <shadow-heading text="Passion" />
-      <passion />
+    <section id="passion">
+      <v-container>
+        <shadow-heading text="Passion" />
+        <passion />
+      </v-container>
     </section>
 
-    <section id="recommendations" class="py-10 my-16">
-      <shadow-heading text="Recommendations" />
-      <expansion-panel :items="education" />
+    <section id="recommendations">
+      <v-container>
+        <shadow-heading text="Recommendations" />
+        <testimonial />
+      </v-container>
     </section>
 
-    <section id="education" class="py-10 my-16">
-      <shadow-heading text="Education" />
-      <expansion-panel :items="education" />
+    <section id="education">
+      <v-container>
+        <shadow-heading text="Education" />
+        <expansion-panel :items="education" />
+      </v-container>
     </section>
 
-    <section id="certifications" class="py-10 my-16">
-      <shadow-heading text="Certifications" />
-      <expansion-panel :items="certifications" />
+    <section id="certifications">
+      <v-container>
+        <shadow-heading text="Certifications" />
+        <expansion-panel :items="certifications" />
+      </v-container>
     </section>
 
-    <section id="contact" class="py-10 my-16">
-      <v-row justify="center" align="center" class="text-center">
-        <v-col md="8" cols="12">
-          <v-card flat color="grey lighten-4" class="pa-4">
-            <v-card-title primary-title>
-              <p class="mx-auto mb-1">
-                Drop a message!
-              </p>
-            </v-card-title>
-            <v-card-text>
-              Let's work together and I'll help you strategize your next project.
-            </v-card-text>
-            <v-card-actions>
-              <v-btn elevation="0" class="mx-auto text-capitalize" outlined :href="mailingAddress">
-                Get in touch!
-              </v-btn>
-            </v-card-actions>
-          </v-card>
-        </v-col>
-        <v-col cols="12" class="font-weight-bold">
-          Stay Connected
-        </v-col>
-        <v-col cols="12">
-          <span class="caption grey--text">
-            New Delhi, India
-          </span>
-          <p class="text-h6">
-            <a :href="mailingAddress" class="text-decoration-none text--primary">
-              rajruchi7@gmail.com
-            </a>
-          </p>
-        </v-col>
-        <v-col cols="12">
-          <v-btn
-            small
-            text
-            fab
-            :href="linkedin"
-            target="_blank"
-          >
-            <v-img max-height="20" max-width="20" contain :src="logoSrc('linkedin')" />
-          </v-btn>
-          <v-btn
-            small
-            text
-            fab
-            :href="medium"
-            target="_blank"
-          >
-            <v-img max-height="20" max-width="20" contain :src="logoSrc('medium')" />
-          </v-btn>
-        </v-col>
-      </v-row>
+    <section id="contact" class="grey darken-4">
+      <v-container>
+        <v-row justify="center" align="center" class="white--text text-center">
+          <v-col md="8" cols="12">
+            <v-card flat dark color="black" class="pa-4">
+              <v-card-title primary-title>
+                <p class="mx-auto mb-1">
+                  Drop a message!
+                </p>
+              </v-card-title>
+              <v-card-text>
+                Let's work together and I'll help you strategize your next project.
+              </v-card-text>
+              <v-card-actions>
+                <v-btn color="white black--text" elevation="0" class="mx-auto text-capitalize" :href="mailingAddress">
+                  Get in touch!
+                </v-btn>
+              </v-card-actions>
+            </v-card>
+          </v-col>
+          <v-col cols="12" class="font-weight-bold">
+            Stay Connected
+          </v-col>
+          <v-col cols="12">
+            <span class="caption grey--text">
+              New Delhi, India
+            </span>
+            <p class="text-h6">
+              <a :href="mailingAddress" class="text-decoration-none white--text">
+                rajruchi7@gmail.com
+              </a>
+            </p>
+          </v-col>
+          <v-col cols="12">
+            <v-btn
+              color="white"
+              small
+              fab
+              :href="linkedin"
+              target="_blank"
+            >
+              <v-img max-height="20" max-width="20" contain :src="logoSrc('linkedin')" />
+            </v-btn>
+            <v-btn
+              color="white"
+              small
+              fab
+              :href="medium"
+              target="_blank"
+            >
+              <v-img max-height="20" max-width="20" contain :src="logoSrc('medium')" />
+            </v-btn>
+          </v-col>
+        </v-row>
+      </v-container>
     </section>
   </v-sheet>
 </template>
@@ -152,6 +174,7 @@ import About from '@/components/About.vue'
 import Work from '@/components/Work.vue'
 import GridShowcase from '@/components/GridShowcase.vue'
 import Passion from '@/components/Passion.vue'
+import Testimonial from '@/components/Testimonial.vue'
 import GoogleMap from '@/components/GoogleMap.vue'
 import ExpansionPanel from '@/components/ExpansionPanel.vue'
 
@@ -165,6 +188,7 @@ export default {
     GridShowcase,
     ExpansionPanel,
     Passion,
+    Testimonial,
     GoogleMap
   },
 
@@ -177,7 +201,15 @@ export default {
       role: 'Intern',
       location: 'New Delhi, India',
       logo: 'shahi.png',
-      responsibilities: 'Created 5 training modules for the entirely new cell "Supervisor Development Cell" which is currently live In Shahi Exports pan india',
+      responsibilities: [
+        'Worked on a live-project "Supervisor Development Cell" which was a completely new cell being introduced into Shahi. As a part of the organisational behaviour team, I developed and designed various modules of supervisor development cell',
+        'The modules are:',
+        'Supervisor monitoring tool',
+        'Training modules',
+        'Selection criteria',
+        'Monitoring tools',
+        'Developing a machine matrix for standardising the process'
+      ],
       url: 'https://www.shahi.co.in/'
     }, {
       name: 'Raymond Limited',
@@ -194,6 +226,18 @@ export default {
       role: 'HR',
       location: 'New Delhi, India',
       logo: 'newgen.png',
+      responsibilities: [
+        'In the past, at Newgen I joined a startup team as the 2nd member and took it to 30+ along with a lean HR team. I have hired for roles across Digital Marketing, Design, Operations, Technology as well as Finance form all over India.',
+        'Assisted building the whole team of Newgen which was a startup across all the profiles including tech, marketing and design and finance.',
+        'Creation of JD and optimizing them as per the job portal.',
+        'Managing all the portals including Internshala, iimjobs, naukri, letsintern, Hirist, LinkedIn and many such platforms.',
+        'End to end recruitment - screening to final interview with the hiring manager.',
+        'Participated in online Campus Placements from institutes like IIT , Nit, Amity, Arena and Christ University.',
+        'Create and maintain the talent pool for all the profiles including web developers, graphic designers, backend developers, marketing, BD and Finance.',
+        'Manage team of virtual interns with their tasks and deadlines.',
+        'Team building and performance management by reviews and problem solving.',
+        'Conducted employee on-boarding and plan training & development.'
+      ],
       url: 'https://www.newgenpayments.com/'
     }],
     education: [{
@@ -276,3 +320,10 @@ export default {
   }
 }
 </script>
+
+<style>
+section {
+  padding-top: 6%;
+  padding-bottom: 6%;
+}
+</style>

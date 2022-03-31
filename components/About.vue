@@ -8,14 +8,18 @@
         <v-col cols="12" class="text-h6 font-weight-bold">
           Implementation Specialist and Customer Success Manager
         </v-col>
+        <v-col cols="12" class="title text--secondary py-0">
+          I believe in Fast | Fail | Forward
+        </v-col>
         <v-col cols="12" class="text-justify body-2">
-          Result-driven and detailed oriented professional holding 5+ years of experience with various SAAS platforms
-          handling customers' success and building relationships across the globe with a consulting approach. Pursuing
-          the opportunity at Techpacker to boost premium customer satisfaction with 90% positive feedback and
-          automate the non-enterprise customer onboarding and journey.
+          Transparent communication disciplines the chaos. This belief keeps me on my toes and remains a constant source of motivation throughout my role as a customer success manager.
+          I have 5 + years of experience in customer success, including customer on-boarding, training, and implementation of the SaaS software onsite in 10+ countries including Thailand, the Philippines, Vietnam, Bangladesh, India, and offsite in Australia, the US, New Zealand, and Europe.
+        </v-col>
+        <v-col cols="12" class="text-justify body-2">
+          Reducing churn and maintaining the analysis of customer usage for scaling up has been a crucial part of my role. Problem-solving was always my hobby and it gradually shaped my career steer towards this side of the business. I love helping people and believe that it’s better to empower than to sympathize, so I offer sessions on image enhancement in my free hours to NGOs and other social organizations.
         </v-col>
         <v-col cols="12" class="body-2">
-          <v-btn elevation="0" class="text-capitalize" outlined :href="mailingAddress">
+          <v-btn color="black white--text" elevation="0" class="text-capitalize mr-2" :href="mailingAddress">
             Get in touch!
           </v-btn>
           <v-btn

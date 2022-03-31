@@ -7,11 +7,13 @@
             v-for="(m, index) in implementations"
             :key="index"
             :position="m.position"
+            @mouseover="openInfoWindow(index)"
+            @mouseout="closeInfoWindow"
             :clickable="true"
             :icon="m.icon"
             @click="openInfoWindow(index)"
           >
-            <gmap-info-window :options="infoWindow.options" :position="infoWindow.position" :opened="infoWindow.open === index" @closeclick="infoWindow.open=false">
+            <gmap-info-window :options="infoWindow.options" :position="infoWindow.position" :opened="infoWindow.open === index" @closeclick="closeInfoWindow">
               <div v-html="infoWindow.template" />
             </gmap-info-window>
           </GmapMarker>
@@ -96,6 +98,10 @@ export default {
       const imageSrc = require(`@/assets/images/${image}`)
       this.infoWindow.template = `<br><img src="${imageSrc}" style="max-height: 150px; max-width: 200px;" /><br><b>${city}, ${country}</b>`
       this.infoWindow.open = index
+    },
+
+    closeInfoWindow () {
+      this.infoWindow.open = false
     }
   }
 }
