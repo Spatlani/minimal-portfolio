@@ -59,6 +59,11 @@
       <work />
     </section>
 
+    <section id="tools" class="py-10 my-16">
+      <shadow-heading text="Tools" />
+      <grid-showcase />
+    </section>
+
     <section id="internship" class="py-10 my-16">
       <shadow-heading text="Internships" />
       <expansion-panel :items="companies" />
@@ -67,6 +72,11 @@
     <section id="passion" class="py-10 my-16">
       <shadow-heading text="Passion" />
       <passion />
+    </section>
+
+    <section id="recommendations" class="py-10 my-16">
+      <shadow-heading text="Recommendations" />
+      <expansion-panel :items="education" />
     </section>
 
     <section id="education" class="py-10 my-16">
@@ -140,6 +150,7 @@
 import ShadowHeading from '@/components/ShadowHeading.vue'
 import About from '@/components/About.vue'
 import Work from '@/components/Work.vue'
+import GridShowcase from '@/components/GridShowcase.vue'
 import Passion from '@/components/Passion.vue'
 import GoogleMap from '@/components/GoogleMap.vue'
 import ExpansionPanel from '@/components/ExpansionPanel.vue'
@@ -151,6 +162,7 @@ export default {
     ShadowHeading,
     About,
     Work,
+    GridShowcase,
     ExpansionPanel,
     Passion,
     GoogleMap

@@ -77,8 +77,14 @@ export default {
         title: 'Work',
         to: '#work'
       }, {
+        title: 'Tools',
+        to: '#tools'
+      }, {
         title: 'Passion',
         to: '#passion'
+      }, {
+        title: 'Recommendations',
+        to: '#recommendations'
       }, {
         title: 'Education',
         to: '#education'
