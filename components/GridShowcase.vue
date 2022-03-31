@@ -3,7 +3,7 @@
     <v-col v-for="item in items" :key="item.logo" md="2" cols="4">
       <v-card height="200" outlined>
         <v-card-text class="pa-2">
-          <v-img height="100" contain :src="logoSrc(item.logo)" :lazy-src="logoSrc(item.logo)" />
+          <v-img :height="height" contain :src="logoSrc(item.logo)" :lazy-src="logoSrc(item.logo)" />
           <p class="caption mb-0 text-center">
             {{ item.title }}
           </p>
@@ -67,6 +67,12 @@ export default {
       title: 'Team communication'
     }]
   }),
+
+  computed: {
+    height () {
+      return this.$vuetify.breakpoint.xs ? '50' : '100'
+    }
+  },
 
   methods: {
     logoSrc (logo) {
