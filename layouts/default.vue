@@ -49,14 +49,21 @@
         </v-col>
       </v-row>
     </v-footer>
+    <work-dialog />
   </v-app>
 </template>
 
 <script>
 import goTo from 'vuetify/lib/services/goto'
+import WorkDialog from '@/components/Dialog.vue'
 
 export default {
   name: 'DefaultLayout',
+
+  components: {
+    WorkDialog
+  },
+
   data () {
     return {
       drawer: false,
