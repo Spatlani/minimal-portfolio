@@ -68,7 +68,7 @@ export default {
     companies: [{
       name: 'Provana',
       color: 'deep-purple lighten-5',
-      from: 'Feb 2022',
+      from: 'Jan 2022',
       to: 'Present',
       role: 'Customer success manager',
       location: 'US, Remote',
@@ -91,7 +91,7 @@ export default {
       name: 'Techpacker',
       color: 'teal lighten-5',
       from: 'April 2019',
-      to: 'Present',
+      to: 'Jan 2022',
       role: 'Senior implementation manager',
       location: 'US, Remote',
       logo: 'techpacker.png',
