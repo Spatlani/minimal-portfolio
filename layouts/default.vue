@@ -24,7 +24,6 @@
     </v-navigation-drawer>
     <v-app-bar
       color="white"
-      flat
       fixed
       app
       outlined
@@ -32,6 +31,9 @@
     >
       <v-toolbar-title class="text-h3 pa-2" @click="scrollTo('#top')" v-text="title" />
       <v-spacer />
+      <v-btn color="black white--text" elevation="0" class="text-capitalize mr-2" :href="mailingAddress">
+        Get in touch!
+      </v-btn>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
     </v-app-bar>
     <v-main id="top">
@@ -69,11 +71,11 @@ export default {
         title: 'About',
         to: '#about'
       }, {
-        title: 'Implementations',
-        to: '#implementations'
-      }, {
         title: 'Work',
         to: '#work'
+      }, {
+        title: 'Implementations',
+        to: '#implementations'
       }, {
         title: 'Tools',
         to: '#tools'
@@ -94,6 +96,12 @@ export default {
         to: '#contact'
       }],
       title: 'RR'
+    }
+  },
+
+  computed: {
+    mailingAddress () {
+      return 'mailto:rajruchi7@gmail.com'
     }
   },
 

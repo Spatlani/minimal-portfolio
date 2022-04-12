@@ -1,11 +1,11 @@
 <template>
   <v-row align="center" justify="center">
-    <v-col cols="12" md="8">
+    <v-col cols="12" md="7">
       <v-row>
-        <v-col cols="12" class="text-h6 font-weight-medium">
+        <v-col cols="12" class="text-h6 font-weight-medium pb-0">
           Hi, I am Ruchi Raj. <br> Implementation specialist and customer success manager.
         </v-col>
-        <v-col cols="12" class="text-h3 font-weight-bold">
+        <v-col cols="12" class="text-h4 font-weight-bold pb-0">
           Transparent communication disciplines the chaos.
         </v-col>
         <v-col cols="12" class="text-justify body-2">
@@ -19,8 +19,8 @@
           I believe in Fast | Fail | Forward
         </v-col>
         <v-col cols="12" class="body-2">
-          <v-btn color="black white--text" elevation="0" class="text-capitalize mr-2" :href="mailingAddress">
-            Get in touch!
+          <v-btn color="black white--text" elevation="0" class="text-capitalize mr-2" @click="scrollTo('#work')">
+            See my work
           </v-btn>
           <v-btn
             small
@@ -34,7 +34,7 @@
         </v-col>
       </v-row>
     </v-col>
-    <v-col cols="12" md="4">
+    <v-col cols="12" md="5">
       <v-row>
         <v-col
           v-for="image in imageGrid"
@@ -64,19 +64,22 @@
         </v-col>
       </v-row>
     </v-col>
+
+    <v-col cols="12" class="text-center pa-0">
+      <svg class="arrows">
+        <path stroke-linecap="round" class="a1" d="M0 0 L20 22 L40 0"></path>
+      </svg>
+    </v-col>
   </v-row>
 </template>
 
 <script>
+import goTo from 'vuetify/lib/services/goto'
+
 export default {
   name: 'AboutSection',
 
   props: {
-    mailingAddress: {
-      type: String,
-      default: ''
-    },
-
     linkedin: {
       type: String,
       default: ''
@@ -98,6 +101,16 @@ export default {
   }),
 
   methods: {
+    scrollTo (target) {
+      const options = {
+        offset: 0,
+        duration: 500,
+        easing: 'easeInOutCubic',
+        behavior: 'smooth'
+      }
+      return goTo(target, options)
+    },
+
     logoSrc (logo) {
       return require(`@/assets/logos/${logo}.png`)
     },
@@ -108,3 +121,36 @@ export default {
   }
 }
 </script>
+
+<style>
+.arrows {
+  width: 80px;
+  height: 80px;
+  bottom: 20px;
+}
+
+.arrows path {
+  stroke: #000000;
+  fill: transparent;
+  stroke-width: 3px;
+  animation: arrow 2s infinite;
+  -webkit-animation: arrow 2s infinite;
+}
+
+@keyframes arrow {
+  0% {opacity:0; transform:translateY(10px)}
+  80% {opacity:1; transform:translateY(50px)}
+  100% {opacity:0; transform:translateY(50px)}
+}
+
+@-webkit-keyframes arrow /*Safari and Chrome*/ {
+  0% {opacity:0; transform:translateY(10px)}
+  80% {opacity:1; transform:translateY(50px)}
+  100% {opacity:0; transform:translateY(50px)}
+}
+
+.arrows path.a1 {
+  animation-delay:-0.5s;
+  -webkit-animation-delay:-0.5s; /* Safari and Chrome */
+}
+</style>

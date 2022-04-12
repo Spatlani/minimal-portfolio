@@ -53,17 +53,17 @@
       </v-container>
     </section>
 
-    <section id="implementations">
-      <v-container>
-        <shadow-heading text="Implementations" />
-        <google-map />
-      </v-container>
-    </section>
-
     <section id="work">
       <v-container>
         <shadow-heading text="Work" />
         <work />
+      </v-container>
+    </section>
+
+    <section id="implementations">
+      <v-container>
+        <shadow-heading text="Implementations" />
+        <google-map />
       </v-container>
     </section>
 
